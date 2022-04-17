@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <title>SerP Documentatie</title>
+    <link rel="stylesheet" type="text/css" href="https://w3c.github.io/scholarly-html/css/scholarly.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <header>
+        <h1>Documentatie Service Providers on Web</h1>
+    </header>
+    <section typeof="sa:ProjectLinks">
+        <ul>
+            <li typeof="schema:WebPage" role="link" resource="https://github.com/Alex-Catalin21/HolumaWebProject"
+                property="schema:citation" id="github">
+                <cite property="schema:name">
+                    <a href="https://github.com/Alex-Catalin21/HolumaWebProject">Github</a>
+                </cite>
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:AuthorsList">
+        <h2>Autori</h2>
+        <ul>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <span typeof="schema:Person">
+                    <meta property="schema:givenName" content="Paul">
+                    <meta property="schema:familyName" content="Hordila">
+                    <span property="schema:name">Paul Hordila</span>
+                </span>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="adihordila76@gmail.com"
+                        property="schema:email">#</a>
+                    </li>
+                </ul>
+            </li>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <span typeof="schema:Person">
+                    <meta property="schema:givenName" content="Florin">
+                    <meta property="schema:familyName" content="Lupu">
+                    <span property="schema:name">Florin Lupu</span>
+                </span>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="florinlupu18@gmail.com" property="schema:email">florinlupu18@gmail.com</a>
+                    </li>
+                </ul>
+            </li>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                <span typeof="schema:Person">
+                    <meta property="schema:givenName" content="Alex-Catalin">
+                    <meta property="schema:familyName" content="Martinas">
+                    <span property="schema:name">Alex-Catalin Martinas</span>
+                </span>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="alex_catalin_2009@yahoo.com" property="schema:email">alex_catalin_2009@yahoo.com</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <h2>Cuprins</h2>
+    <ol role="directory">
+        <li>
+            <a href="#introducere">
+                <span> 1. </span>
+                Introducere
+            </a>
+        </li>
+        <li>
+            <a href="#database">
+                <span> 2. </span>
+                Baza de date
+            </a>
+
+            <ol role="directory">
+                <li>
+                    <a href="#usersdb">
+                        <span> 2.1. </span>
+                        Tabelul Users
+                    </a>
+                </li>
+                <li>
+                    <a href="#servicesdb">
+                        <span> 2.2. </span>
+                        Tabelul Servicii
+                    </a>
+                </li>
+
+            </ol>
+        </li>
+        <li>
+            <a href="#front-end">
+                <span> 3. </span>
+                Front End
+            </a>
+
+            <ol role="directory">
+                <li>
+                    <a href="#loginfront">
+                        <span> 3.1. </span>
+                        Login+Register
+                    </a>
+                </li>
+                <li>
+                    <a href="#logoutfront">
+                        <span> 3.2. </span>
+                        Logout
+                    </a>
+                </li>
+                <li>
+                    <a href="#serviciifront">
+                        <span> 3.3. </span>
+                        Servicii
+                    </a>
+
+                    <ol role="directory">
+                        <li>
+                            <a href="#adaugaserviciifront">
+                                <span> 3.3.1. </span>
+                                Adauga servicii
+                            </a>
+                        </li>
+
+                    </ol>
+
+                </li>
+
+            </ol>
+        </li>
+        <li>
+            <a href="#back-end">
+                <span> 4. </span>
+                Back End
+            </a>
+
+            <ol role="directory">
+                <li>
+                    <a href="#signuploginback">
+                        <span> 4.1. </span>
+                        Sign-Up & Login
+                    </a>
+                </li>
+                <li>
+                    <a href="#serviciiback">
+                        <span> 4.2. </span>
+                        Servicii
+                    </a>
+                    <ol role="directory">
+                        <li>
+                            <a href="#adaugaserviciuback">
+                                <span> 4.2.1. </span>
+                                Adauga Serviciu
+                            </a>
+                        </li>
+
+                    </ol>
+
+                </li>
+                
+                <li>
+                    <a href="#shopback">
+                        <span> 4.3. </span>
+                        Shop
+                    </a>
+                </li>
+
+            </ol>
+        </li>
+
+        <li>
+            <a href="#teamwork">
+                <span> 5. </span>
+                Lucru in echipa
+            </a>
+        </li>
+    </ol>
+
+    <section id="introducere">
+
+        <h3>
+            Introducere
+        </h3>
+
+    </section>
+
+    <section id="database">
+
+        <h3>
+            Baza de date
+        </h3>
+        <p>Vom opta pentru a folosi MySQL, datorita faptului ca este sub o licenta deschisa, 
+            iar faptul ca este usor de interogat a reprezentat un plus.
+        </p>
+        <section id="usersdb">
+            <h3>
+                Tabelul Users
+            </h3>
+            <p>Datele ce vor fi introduse in acest tabel sunt furnizate de form-ul din pagina de register si corespund
+                credentialelor contului nou creat.</p>
+            <p>Asa arata tabelul users, ca structura, acesta fiind tabelul unde vor fi stocate toate detaliile legate de
+                un utilizator:</p>
+            <ul>
+                <li>id</li>
+                <li>password</li>
+                <li>email</li>
+                <li>admin(yes/no)</li>
+            </ul>
+        </section>
+
+        <section id="servicesdb">
+            <h3>
+                Tabelul Services
+            </h3>
+            <p>Datele ce vor fi introduse in acest tabel sunt furnizate de form-ul din pagina de admin.</p>
+
+            <p>Asa arata structura tabelului recipes:</p>
+            <ul>
+                <li>category</li>
+                <li>city</li>
+                <li>price</li>
+                <li>start_date</li>
+                <li>end_date</li>
+            </ul>
+
+        </section>
+
+    </section>
+
+    <section id="front-end">
+
+    </section>
+    <h3>
+        Front End
+    </h3>
+
+    <p>Toate paginile site-ului sunt responsive, elementele ce le compun redimensionandu-se in pagina in functie de
+        dispozitivul utilizat.</p>
+
+    <section id="loginfront">
+        <h3>
+            Register+Login
+        </h3>
+
+        <p>Inregistrarea si logarea se vor face pe pagina  login.html.</p>
+
+        <p>Parteile de register si login sunt intuitive. Pentru a completa trebuiesc introduse urmatoarele date:
+            e-mail, parola. Completarea tuturor acestor campuri este obligatorie.</p>
+
+        <p>Input box-ul destinat introducerii parolei va avea ca tip "password pentru ca textul introdus inauntru sa
+            fie cenzurat.</p>
+        <p> Campul pentru parola este cenzurat pentru a proteja datele utilizatorului</p>
+
+        <p>Nu se va putea apasa butonul "Submit" fara ca toate campurile sa fie completate folosindu-se formatul
+            specificat.</p>
+
+    </section>
+
+
+    <section id="logoutfront">
+        <h3>
+            Logout
+        </h3>
+
+
+        <p>Pentru deconectarea utilizatorul logat trebuie sa apese butonul de log-out, ce se afla in dreapta sus
+            in navbar, pe orice pagina.
+        </p>
+    </section>
+
+    <section id="serviciifront">
+        <h3>
+            Servicii
+        </h3>
+        <p>
+            Pagina de servicii este populata cu diferite oferte de servicii.
+        </p>
+        <p>
+            La un serviciu se afiseaza urmatoarele detalii:
+            numele serviciului, valabilitate si pret.
+        </p>
+        <section id="adaugareserviciifront">
+            <h4>Adauga servicii</h4>
+            <p>Pe pagina de admin, pentru un utilizator logat cu grad de admin.
+            </p>
+            <p>
+                Pagina de admin contine un formular cu toate campurile obligatorii.
+                Campurile sunt: categorie, pret, oras, valabilitate.
+
+            </p>
+            <p>
+                Dupa ce formularul este completat, avem un buton "Add service" de tip submit.
+            </p>
+        </section>
+
+
+    <section id="back-end">
+        <h3>
+            Back End
+        </h3>
+        <section id="signuploginback">
+            <h3>
+                Register & Login
+            </h3>
+            <p>Arhitectura generala a partii/modulului responsabil de Register si Login o sa fie bazata pe MVC.</p>
+            <p>Fiecare utilizator inregistrat va avea un email si un id unic.</p>
+            <p>
+                Va fi o functionalitate de a schimba din register in login si vice-versa.
+            </p>
+            <h4>Register</h4>
+            <p>
+                Pentru a ne creea un cont se verifica daca datele transmise POST sunt corecte.
+            </p>
+            <p>
+                Dupa ce se realizeaza, unui cont nou creat i se vor salva campurile transmise in baza de date, dupa
+                modelul user,
+                iar parola contului nou creat este salvata.
+            </p>
+
+            <h4>Login</h4>
+            <p>Pentru a realiza logarea utilizatorului vom trimite un request la back-end cu metoda POST. Dupa validarea
+                datelor
+                si verificarea userului in baza de date, daca acesta exista.
+
+            </p>
+
+        </section>
+        <section id="serviciiback">
+            <h3> Servicii </h3>
+            <p> La incarcarea paginii de shop, se vor afisa serviciile. In realizarea
+                functionalitatii se va utiliza metoda GET. </p>
+            <p>Pe pagina de verificam daca userul este logat.</p>
+
+            <section id="adaugareserviciuback">
+                <h4> Adaugare serviciu</h4>
+                <p>Formularul de adaugare serviciu trebuie trimis cu toate campurile completate.</p>
+
+            </section>
+
+        
+        <section id="shopback">
+            <h3>Shop</h3>
+            <p>
+                Serviciul este luat din baza de date printr-un request de forma GET.
+            </p>
+            <p>
+                Toate informatiile primite despre un servicu vor fi afisate: categorie, oras, pret, valabilitate.
+            </p>
+            
+        <section>
+            <section id="teamwork">
+                <h2>Lucru in echipa</h2>
+                <p>Pentru a distribui taskurile si manageria timpul de lucru, am organizat saptamanal intalniri pe
+                    Discord,
+                    unde am discutat lucrul pe saptamana curenta si taskurile pentru urmatoarea saptamana. Am lucrat
+                    impreuna la pagini
+                    si la integrarea lor continua.
+                </p>
+                <p>Am tinut legatura constant, iar atunci când cineva se afla intr-un impas, am incercat cu totii sa
+                    rezolvam problema.</p>
+                <ul>
+                    <li>
+                        <h3>Hordila Paul</h3>
+                        <p>
+                            Partea 1: Home, login.
+
+                        </p>
+                        
+                    </li>
+                    <li>
+                        <h3>Lupu Florin</h3>
+                        <p>
+                            Partea 1: Admin, login.
+                        </p>
+                        
+                    </li>
+                    <li>
+                        <h3>Martinas Alex</h3>
+                        <p>
+                            Partea 1: Shop, Login.
+                            
+                        </p>
+                        
+                    </li>
+                </ul>
+
+            </section>
+            <section typeof="sa:Ajutor" class="main_container">
+                <h2>Resurse externe</h2>
+                <ul>
+                    <li>
+                        <a href="https://discord.com/%22%3EDiscord">Discord</a> pentru a organiza intalniri si zile de lucru impreuna pentru integrarea proiectului.
+                    </li>
+                    <li>
+                        <a href="https://github.com/georgianaB20/WebTechnologiesProject%22%3EGithub">Github</a> pentru publicarea proiectului.
+                    </li>
+                    <li>
+                        <a href="https://developer.mozilla.org/en-US/%22%3EMDN">devMozilla</a>, 
+                        <a href="https://www.w3schools.com/%22%3Ew3schools">w3schools</a>, 
+                        <a href="https://css-tricks.com/%22%3Ecss-tricks">css-tricks</a> pentru a ne documenta in realizarea proiectului.
+        
+                    </li>
+                    <li>
+                        <a href="https://validator.w3.org/">HTML validator</a>,
+                        <a href="http://csslint.net/%22%3ECSS Lint">CSS validator</a> pentru validarea codului de HTML, respectiv CSS.
+                    
+                    </li>
+                </ul>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
