@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="admin.css" rel="stylesheet" type="text/css" />
+    <title>Admin</title>
+</head>
+
+<body>
+    <div class="header">
+        <img src="/imagini/new-logo.png" alt="logo" />
+        
+        <div class="header-right">
+          <a  href="home.html">Home</a>
+          <a href="shop.html">Services</a>
+          <a href="login.html">Log-in/Sign-in</a>
+          <a href="">Log-out</a>
+          <a class="active" href="admin.html">Admin</a>
+        </div>
+      </div>
+    <div class="title">
+      <h2>Add new Service</h2>
+    </div>
+    <div >
+        <label>Categorie</label>
+        <select id="category">
+            <option value="Inchiriere risca">Inchiriere risca</option>
+            <option value="Dirijabil a la Uber">Dirijabil a la Uber</option>
+            <option value="Masaj electric">Masaj electric</option>
+            <option value="Inhumari de lux">Inhumari de lux</option>
+            <option value="Curatat gradina">Curatat gradina</option>
+        </select>
+        
+        <label>Pret</label>
+        <input type="text" placeholder="Pret.."/>
+
+        <label>Oras</label>
+        <input type="text" placeholder="Oras"/>
+        <label for="start">Start date:</label>
+        <input type="date" id="start" name="service-start" value="2022-04-15" min="2022-04-15" max="2032-04-15">
+        <label for="finish">Last date:</label>
+        <input type="date" id="finish" name="service-finish" value="2022-04-15" min="2022-04-15" max="2032-04-15">
+
+        <input type="submit" id="btn" value="Add Service">
+    </div>
+    
+</body>
+</html>
