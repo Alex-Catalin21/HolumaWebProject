@@ -11,7 +11,7 @@
         <img src="/Imagini/new-logo.png" alt="logo" />
         
         <div class="header-right">
-          <a  href="home.html">Home</a>
+          <a href="home.html">Home</a>
           <a href="shop.html">Services</a>
           <a href="login.html">Log-in/Sign-in</a>
           <a href="">Log-out</a>
@@ -22,7 +22,11 @@
       <h2>Add new Service</h2>
     </div>
     <div >
-    <form class="admin" action="admin.php" method="post">
+        <input type="radio" name="slide" id="adminservices" checked />
+        <input type="radio" name="slide" id="adminusers" />
+        <label for="adminservices" class="">Services</label>
+        <label for="adminusers" class="">Users</label>
+    <form class="adminservices" action="admin.php" method="post">
         <label>Categorie</label>
         <select name="idcat" id="category">
             <option value="1">Inchiriere risca</option>
@@ -69,6 +73,24 @@
         
     </form>
     </div>
+    <div>
+        <form class="adminusers" action="admin.php" method="post">
+        
+            <label>Id</label>
+            <input 
+            type="text"
+            placeholder="Id"
+            name="id"
+            required
+            /> 
+            <select name="CatUser" id="categoryUser">
+                <option value="0">Client</option>
+                <option value="1">Admin</option>
+            </select>
+            <input type="submit" id="btn" value="Modify user">
+        </form>
+    </div>
+
 
     
 </body>
@@ -86,8 +108,8 @@
             }
     class Actiune_admin{
         public function adaugaServiciu(){
-            $sql = "INSERT INTO services(Id_cat,Pret,Oras,First_date,Last_date) VALUES (:Id_cat,:Pret,:Oras,:First_date,:Last_date)";
-            $cerere =  BD::obtine_conexiune()->prepare($sql);
+            $sqlserviciu = "INSERT INTO services(Id_cat,Pret,Oras,First_date,Last_date) VALUES (:Id_cat,:Pret,:Oras,:First_date,:Last_date)";
+            $cerereserviciu =  BD::obtine_conexiune()->prepare($sqlserviciu);
             if(isset($_POST["idcat"],$_POST["pret"],$_POST["oras"],$_POST["firstdate"],$_POST["lastdate"])){
                 $Id_cat = $_POST["idcat"];
                 $Pret = $_POST["pret"];
@@ -103,8 +125,21 @@
                 ]);
             }
         }
+        public function schimbaUser(){
+            $sqluser = "UPDATE users SET admin_val=:catUser WHERE user_id=:idcautat";
+            $cerereuser =  BD::obtine_conexiune()->prepare($sqluser);
+            if(isset($_POST["CatUser"],$_POST["id"])){
+                $catUser= $_POST["CatUser"];
+                $idcautat=$_POST["id"];
+                return $cerereuser -> execute ([
+                    'catUser' => $catUser,
+                    'idcautat' => $idcautat
+                ]);
+            }
+        }
     }
     $actiune_admin= new Actiune_admin();
     $actiune_admin -> adaugaServiciu();
+    $actiune_admin -> schimbaUser();
 
 ?>
