@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -17,11 +20,21 @@
       <img src="imagini/new-logo.png" alt="logo" />
     
       <div class="header-right">
-        <a class="active" href="home.html">Home</a>
+        <a class="active" href="home.php">Home</a>
         <a href="shop.html">Services</a>
-        <a href="login.html">Log-in/Sign-in</a>
-        <a href="">Log-out</a>
-        <a href="admin.html">Admin</a>
+        <?php
+        if(!$_SESSION["loggedin"])
+        {
+        ?>
+           <a href="login.php">Log-in/Sign-in</a>
+        <?php
+        }else{
+        ?>
+      
+        <a href="javascript:{}" onclick="document.getElementById('logout_form').submit();">Log-out</a>
+        <?php
+        }
+        ?>
       </div>
     </div>
 
@@ -31,5 +44,7 @@
 
       
     </main>
+    <form action="logout.php" id="logout_form" method="post">
+    <form>
   </body>
 </html>

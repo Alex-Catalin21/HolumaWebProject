@@ -11,9 +11,9 @@
         <img src="/Imagini/new-logo.png" alt="logo" />
         
         <div class="header-right">
-          <a href="home.html">Home</a>
+          <a href="home.php">Home</a>
           <a href="shop.html">Services</a>
-          <a href="login.html">Log-in/Sign-in</a>
+          <a href="login.php">Log-in/Sign-in</a>
           <a href="">Log-out</a>
           <a class="active" href="admin.html">Admin</a>
         </div>
