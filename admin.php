@@ -18,14 +18,15 @@
           <a class="active" href="admin.html">Admin</a>
         </div>
       </div>
+    <div>
+    <a href="admin.php">Adauga Serviciu</a>
+    <a href="admin_statut.php">Schimba calitatea utilizatorului</a>
+    <a href="admin_serviciu_update.php">Actualizare Serviciu</a>
+    </div>
     <div class="title">
       <h2>Add new Service</h2>
     </div>
     <div >
-        <input type="radio" name="slide" id="adminservices" checked />
-        <input type="radio" name="slide" id="adminusers" />
-        <label for="adminservices" class="">Services</label>
-        <label for="adminusers" class="">Users</label>
     <form class="adminservices" action="admin.php" method="post">
         <label>Categorie</label>
         <select name="idcat" id="category">
@@ -73,25 +74,6 @@
         
     </form>
     </div>
-    <div>
-        <form class="adminusers" action="admin.php" method="post">
-        
-            <label>Id</label>
-            <input 
-            type="text"
-            placeholder="Id"
-            name="id"
-            required
-            /> 
-            <select name="CatUser" id="categoryUser">
-                <option value="0">Client</option>
-                <option value="1">Admin</option>
-            </select>
-            <input type="submit" id="btn" value="Modify user">
-        </form>
-    </div>
-
-
     
 </body>
 </html>
@@ -116,7 +98,7 @@
                 $Oras = $_POST["oras"];
                 $First_date = $_POST["firstdate"];
                 $Last_date = $_POST["lastdate"];
-                return $cerere -> execute ([
+                return $cerereserviciu -> execute ([
                     'Id_cat' => $Id_cat,
                     'Pret' => $Pret,
                     'Oras' => $Oras,
@@ -125,21 +107,9 @@
                 ]);
             }
         }
-        public function schimbaUser(){
-            $sqluser = "UPDATE users SET admin_val=:catUser WHERE user_id=:idcautat";
-            $cerereuser =  BD::obtine_conexiune()->prepare($sqluser);
-            if(isset($_POST["CatUser"],$_POST["id"])){
-                $catUser= $_POST["CatUser"];
-                $idcautat=$_POST["id"];
-                return $cerereuser -> execute ([
-                    'catUser' => $catUser,
-                    'idcautat' => $idcautat
-                ]);
-            }
-        }
     }
     $actiune_admin= new Actiune_admin();
     $actiune_admin -> adaugaServiciu();
-    $actiune_admin -> schimbaUser();
+
 
 ?>
