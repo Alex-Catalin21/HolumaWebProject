@@ -57,18 +57,18 @@
         type="date" 
         id="start" 
         name="firstdate" 
-        value="2022-04-15" 
-        min="2022-04-15" 
-        max="2032-04-15">
+        value="2022-07-02" 
+        min="2022-07-02" 
+        max="2032-07-02">
 
         <label for="finish">Last date:</label>
         <input 
         type="date" 
         id="finish" 
         name="lastdate" 
-        value="2022-04-15" 
-        min="2022-04-15" 
-        max="2032-04-15">
+        value="2022-07-02" 
+        min="2022-07-02" 
+        max="2032-07-02">
         
         <input type="submit" id="btn" value="Add Service">
         
