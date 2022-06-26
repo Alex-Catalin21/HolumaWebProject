@@ -6,7 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
- body {
+body {
     display: grid;
     height: 100%;
     width: 100%;
@@ -256,10 +256,10 @@ form .btn input[type="submit"] {
     background: rgb(10,10,35);
     background: linear-gradient(90deg, rgba(10,10,35,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
     padding: 10px 10px;
-  }
-  
- 
-  .header a {
+}
+
+
+.header a {
     float: left;
     color: black;
     text-align: center;
@@ -268,38 +268,38 @@ form .btn input[type="submit"] {
     font-size: 18px;
     line-height: 15px;
     border-radius: 4px;
-  }
-  
-  
-  .header a.logo {
+}
+
+
+.header a.logo {
     font-size: 25px;
     font-weight: bold;
-  }
-  
-  
-  .header a:hover {
+}
+
+
+.header a:hover {
     background-color: #ddd;
     color: black;
-  }
-  
-  
-  .header a.active {
+}
+
+
+.header a.active {
     background-color: dodgerblue;
     color: black;
-  }
-  
+}
 
-  .header-right {
+
+.header-right {
     background-color: white;
     float: right;
-  }
-  .header img {
+}
+.header img {
     float: left;
-  }
-  
-  .header h1 {
+}
+
+.header h1 {
     position: relative;
     top: 10px;
     left: 10px;
-  }
-  
+}
+

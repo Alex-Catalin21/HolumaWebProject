@@ -50,4 +50,5 @@
 
       //SELECT Id_cat, COUNT(Id_cat) AS `orders` FROM services WHERE Oras='Cluj' GROUP BY Id_cat ORDER BY `orders` DESC
       //query for statistics
+    
 ?>

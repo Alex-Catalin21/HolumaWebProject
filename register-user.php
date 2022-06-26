@@ -34,7 +34,8 @@
                 header("location: register.php");
             }
         }
-        }
+    }
+
     $actiune = new Actiune();
     $actiune -> adaugaUtilizator();
 ?>

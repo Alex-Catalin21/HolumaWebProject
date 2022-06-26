@@ -1,5 +1,6 @@
 <?php
   session_start();
+  include_once  'bdConnection.php'; // included bd
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +27,7 @@
         if(!$_SESSION["loggedin"])
         {
         ?>
-           <a href="login.php">Log-in/Sign-in</a>
+          <a href="login.php">Log-in/Sign-in</a>
         <?php
         }else{
         ?>
@@ -45,6 +46,43 @@
       
     </main>
     <form action="logout.php" id="logout_form" method="post">
-    <form>
+    </form>
+
+    <a href="rss.xml" target="_blank">
+      <img src="imagini/128px-Feed-icon.svg.png" alt="rss icon" style="width: 50px;">
+    </a>
+
   </body>
 </html>
+
+<?php //almost finished adding rss flux
+
+$web_url = "https://" . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
+
+$str = "<?xml version='1.0' ?>";
+$str .= "<rss version='2.0'>";
+  $str .= "<channel>";
+    $str .= "<title>SERP</title>";
+    $str .= "<description>Our Website</description>";
+    $str .= "<language>en-US</language>";
+    $str .= "<link>$web_url</link>";
+
+    $conn = mysqli_connect("localhost", "root", "", "serp");
+    $result = mysqli_query($conn, "SELECT * FROM services ORDER BY First_date DESC");
+
+    while($row = mysqli_fetch_object($result))
+    {
+      $str .= "<item>";
+        $str .= "<title>" . $row->Id_cat . "</title>";
+
+        $str .= "<description>" . $row->Pret . "</description>";
+        
+        $str .= "<link>" . $web_url . "/product.php?id=" . $row->Oras . "</link>";
+      $str .= "</item>";
+    }
+  $str .= "</channel>";
+$str .= "</rss>";
+
+file_put_contents("rss.xml", $str);
+echo "Flux RSS";
+?>
