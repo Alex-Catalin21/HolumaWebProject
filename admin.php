@@ -12,7 +12,7 @@
         
         <div class="header-right">
             <a href="home.php">Home</a>
-            <a href="shop.html">Services</a>
+            <a href="shop.php">Services</a>
             <a href="login.php">Log-in/Sign-in</a>
             <a href="">Log-out</a>
             <a class="active" href="admin.html">Admin</a>

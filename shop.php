@@ -18,7 +18,7 @@
     
       <div class="header-right">
         <a href="home.html">Home</a>
-        <a class="active" href="shop.html">Services</a>
+        <a class="active" href="shop.php">Services</a>
         <a href="login.php">Log-in/Sign-in</a>
         <a href="">Log-out</a>
         <a href="admin.php">Admin</a>
