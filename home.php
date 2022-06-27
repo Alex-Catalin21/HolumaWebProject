@@ -14,6 +14,19 @@
     />
     <link href="home.css" rel="stylesheet" type="text/css" />
     <title>Home</title>
+
+    <!-- adding css for ajax !-->
+    <style>
+      table,th,td{
+        border : 1px solid black;
+        border-collapse: collapse;
+      }
+      th,td{
+        padding: 5px;
+      }
+    </style>
+    <!-- ajax css end !-->
+
   </head>
   <body>
 
@@ -52,10 +65,45 @@
       <img src="imagini/128px-Feed-icon.svg.png" alt="rss icon" style="width: 50px;">
     </a>
 
+    <p>Flux RSS</p> <!--adding RSS title !-->
+
+    <!-- second ajax example(from ajax xml) !-->
+    <button type="button" onclick="loadDoc()">Preturi in functie de orase</button>
+    <br><br>
+    <table id="demo"></table>
+    <!--end for second ajax example !-->
+
+    <script>
+
+  // second ajax example
+  function loadDoc(){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if(this.readyState == 4 && this.status == 200){
+        myFunction(this);
+      }
+    };
+    xhttp.open("GET", "rss.xml", true);
+    xhttp.send();
+  }
+  function myFunction(xml){
+    var i;
+    var xmlDoc = xml.responseXML;
+    var table = "<tr><th>Pret</th><th>Oras</th></tr>";
+    var x = xmlDoc.getElementsByTagName("item");
+    for(i = 0; i<x.length; i++){
+      table += "<tr><td>" +
+      x[i].getElementsByTagName("pret")[0].childNodes[0].nodeValue + "</td><td>" + x[i].getElementsByTagName("oras")[0].childNodes[0].nodeValue + "</td></tr>";
+    }
+    document.getElementById("demo").innerHTML = table;
+  }
+  //end for ajax script
+  </script>
+
   </body>
 </html>
 
-<?php //almost finished adding rss flux
+<?php //rss flux
 
 $web_url = "https://" . $_SERVER["SERVER_NAME"] . $_SERVER["REQUEST_URI"];
 
@@ -84,5 +132,5 @@ $str .= "<rss version='2.0'>";
 $str .= "</rss>";
 
 file_put_contents("rss.xml", $str);
-echo "Flux RSS";
+
 ?>
