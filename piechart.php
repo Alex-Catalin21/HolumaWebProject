@@ -1,4 +1,4 @@
-<?php require_once 'exportpdf/connect.php'; ?>
+<?php require_once 'forpiechart/connect.php'; ?>
 <?php 
     /*$query = "SELECT * FROM services";*/
     $query = "SELECT Id_cat, COUNT(Id_cat) AS `orders` FROM services WHERE Oras='Cluj' GROUP BY Id_cat ORDER BY `orders` DESC";

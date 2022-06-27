@@ -103,8 +103,14 @@
   </script>
 
 
-  <!-- html for exporting as pdf !-->
+  <!-- html for showing beautiful data !-->
   <form action="piechart.php" target="_blank">
+    <input type="submit" value="Vizualizeaza datele in mod atractiv" />
+  </form>
+  <!-- html for showing beautiful data !-->
+
+  <!-- html for exporting as pdf !-->
+  <form action="dompdf1.php" target="_blank">
     <input type="submit" value="Exporta datele ca si PDF" />
   </form>
   <!-- html for exporting as pdf !-->
