@@ -60,12 +60,14 @@
     </main>
     <form action="logout.php" id="logout_form" method="post">
     </form>
-
+    
+    <!-- rss button and title !-->
     <a href="rss.xml" target="_blank">
-      <img src="imagini/128px-Feed-icon.svg.png" alt="rss icon" style="width: 50px;">
+      <img src="imagini/128px-Feed-icon.svg.png" alt="rss icon" style="width: 50px;display: block;margin-left: auto;margin-right: auto;">
     </a>
 
-    <p>Flux RSS</p> <!--adding RSS title !-->
+    <p style="display:block;margin-left:auto;margin-right:auto;">Flux RSS</p> 
+    <!--RSS button and title !-->
 
     <!-- second ajax example(from ajax xml) !-->
     <button type="button" onclick="loadDoc()">Preturi in functie de orase</button>
@@ -99,6 +101,13 @@
   }
   //end for ajax script
   </script>
+
+
+  <!-- html for exporting as pdf !-->
+  <form action="piechart.php" target="_blank">
+    <input type="submit" value="Exporta datele ca si PDF" />
+  </form>
+  <!-- html for exporting as pdf !-->
 
   </body>
 </html>
