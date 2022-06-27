@@ -73,11 +73,11 @@ $str .= "<rss version='2.0'>";
     while($row = mysqli_fetch_object($result))
     {
       $str .= "<item>";
-        $str .= "<title>" . $row->Id_cat . "</title>";
+        $str .= "<id>" . $row->Id_cat . "</id>";
 
-        $str .= "<description>" . $row->Pret . "</description>";
+        $str .= "<pret>" . $row->Pret . "</pret>";
         
-        $str .= "<link>" . $web_url . "/product.php?id=" . $row->Oras . "</link>";
+        $str .= "<oras>" . $row->Oras  . "</oras>";
       $str .= "</item>";
     }
   $str .= "</channel>";
