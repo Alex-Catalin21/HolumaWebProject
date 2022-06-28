@@ -115,6 +115,12 @@
   </form>
   <!-- html for exporting as pdf !-->
 
+  <!-- html for feedback transport !-->
+  <form action="feedback.html" target="_blank">
+    <input type="submit" value="Doriti sa ne lasati un feedback?"/>
+  </form>
+  <!-- html for feedback transport !-->
+
   </body>
 </html>
 
