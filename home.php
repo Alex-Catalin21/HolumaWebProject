@@ -115,6 +115,12 @@
   </form>
   <!-- html for exporting as pdf !-->
 
+  <!-- html for exporting as json !-->
+  <form action="citesteServiciiRest.php" target="_blank">
+    <input type="submit" value="Exporta serviciile ca si JSON" />
+  </form>
+  <!-- html for exporting as json !-->
+
   <!-- html for feedback transport !-->
   <form action="feedback.html" target="_blank">
     <input type="submit" value="Doriti sa ne lasati un feedback?"/>
