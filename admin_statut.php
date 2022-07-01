@@ -11,14 +11,14 @@
         <img src="/Imagini/new-logo.png" alt="logo" />
         
         <div class="header-right">
-          <a href="home.php">Home</a>
-          <a href="shop.html">Services</a>
-          <a href="login.php">Log-in/Sign-in</a>
-          <a href="">Log-out</a>
-          <a class="active" href="admin.html">Admin</a>
+            <a href="home.php">Home</a>
+            <a href="shop.php">Services</a>
+            <a href="login.php">Log-in/Sign-in</a>
+            <a href="">Log-out</a>
+            <a class="active" href="admin.html">Admin</a>
         </div>
-      </div>
-      <div>
+    </div>
+    <div>
     <a href="admin.php">Adauga Serviciu</a>
     <a href="admin_statut.php">Schimba calitatea utilizatorului</a>
     <a href="admin_serviciu_update.php">Actualizare Serviciu</a>
@@ -27,7 +27,7 @@
         <form class="adminusers" action="admin_statut.php" method="post">
         
         <div class="title">
-      <h2>Schimba calitatea utilizatorului</h2>
+    <h2>Schimba calitatea utilizatorului</h2>
         </div>
             <input 
             type="text"
@@ -88,7 +88,7 @@
                 ]);
             }
         }
-          
+
     }
 
     $actiune_statut= new Actiune_statut();

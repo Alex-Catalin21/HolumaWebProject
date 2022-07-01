@@ -80,7 +80,7 @@
     padding: 10px 10px;
   }
   
- 
+
   .header a {
     float: left;
     color: black;
@@ -92,7 +92,7 @@
     border-radius: 4px;
   }
   
- 
+
   .header a.logo {
     font-size: 25px;
     font-weight: bold;
@@ -110,7 +110,7 @@
     color: black;
   }
   
- 
+
   .header-right {
     background-color: white;
     float: right;
@@ -125,7 +125,7 @@
     left: 10px;
   }
   
- 
+
   @media screen and (max-width: 500px) {
     .header a {
       float: none;

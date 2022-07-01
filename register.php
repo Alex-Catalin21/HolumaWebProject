@@ -14,12 +14,12 @@
   
       <div class="header-right">
         <a class="active" href="home.php">Home</a>
-        <a href="shop.html">Services</a>
+        <a href="shop.php">Services</a>
         <?php
         if(!$_SESSION["loggedin"])
         {
         ?>
-           <a href="login.php">Log-in/Sign-in</a>
+          <a href="login.php">Log-in/Sign-in</a>
         <?php
         }else{
         ?>

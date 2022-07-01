@@ -130,7 +130,7 @@
                 <span> 4. </span>
                 Back End
             </a>
-
+            
             <ol role="directory">
                 <li>
                     <a href="#signuploginback">
@@ -182,7 +182,9 @@
     </section>
 
     <section id="database">
-
+        <body><div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers tags lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2022-06-30T09:54:23.052Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\&quot; etag=\&quot;J_-WOyxb8bCsISIPljo9\&quot; version=\&quot;20.0.4\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;gUKTKfPiJpqgYqrIHpaY\&quot; name=\&quot;Page-1\&quot;&gt;7ZrRbtsgFIafJpebYhw76eXittukVq0WbZN2E1FDbBQMHpA66dMPHBwnZdHSzJF7gWQp5uccDHwH54A8CJNi/VnAMr/nCNMBGKL1ILweABCA8UT/GGWzVaJxtBUyQZA1aoUZecFWHFp1RRCWB4aKc6pIeSimnDGcqgMNCsGrQ7MFp4dPLWGGHWGWQuqqPwlS+VadgHGrf8Eky5snB/HVtqaAjbEdicwh4tWeFN4MwkRwrrZ3xTrB1ExeMy9bv9sjtbuOCczUKQ7L9cMUxL/gs7ySP0ZF9TNhqw8WxjOkKzvg7xILaXusNs00yIoUFDJdmi44UzNbM9TlNCcU3cENX5luSAXTZVOa5lyQF20Pqa4KtKCrhbKUQWxaI5QmnHKhBcbrB7ROM9OYfYzAUrs9NsMNXkn3cH1geAelajrIKYWlJE91l41jAUVG2JQrxQtrZOcBC4XXRyc42GHT8Y55gZXYaBPrMLGgbaTHtli1YRM0Wr4fMlFsw9WGarZruaWpbyzQN8CdOHBXGu5c+7zGqwetajqCL/ErHH8hBCnJmC5SvDBuZtaIXjKfrKx4aRorYUpYdlfbXI9a5Zsdu5G49l3QelnkBCHMDECuoIJPuwArOWGqnptoqi89hcnwYzSIdMcTXQ7asr6MuVAJZ3oskNTgsA6FCptwOI3y8YXioresQXwaa3Ap1LGD+qaAhHrQHYOOQM+gxw7oEkpZceEXddesm9SlN9ZXDmsB2dJz7phzMBz1DLpJdvdIQ1QQNteCx9017vDExOxyuAMH9wyLZ5Jin3ifk3iH4MzMewIuRRg4hOWWsM++z1nRwZEAeC/pdxA6vL+ieQoVzrht3gPvEHjvaXgwcoA/Cqw86a5J956EB+4R2YOA7h+1J/2fpN9BGu6eotwSIdUc6Re5B9458P4Tcfc0xaSvnvdleEe9p2nuifgtxujJbHb8xuvtG68oPnPj1bzquyfsnpkRNF8cg+zX9D/X9OR977yAe3T2e6U5qc1cplz413jnyHvfewH3+Mwv8EvRvuD+Sxfbrx/qur1vSMKbPw==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+            <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+        </body>
         <h3>
             Baza de date
         </h3>
@@ -201,7 +203,8 @@
                 <li>id</li>
                 <li>password</li>
                 <li>email</li>
-                <li>admin(yes/no)</li>
+                <li>rank</li>
+                <li>admin(1/0)</li>
             </ul>
         </section>
 
@@ -211,13 +214,29 @@
             </h3>
             <p>Datele ce vor fi introduse in acest tabel sunt furnizate de form-ul din pagina de admin.</p>
 
-            <p>Asa arata structura tabelului recipes:</p>
+            <p>Asa arata structura tabelului services:</p>
             <ul>
-                <li>category</li>
+                <li>ID</li>
+                <li>Id_category</li>
                 <li>city</li>
                 <li>price</li>
                 <li>start_date</li>
                 <li>end_date</li>
+            </ul>
+
+        </section>
+        <section id="feedbacksdb">
+            <h3>
+                Tabelul Feedback
+            </h3>
+            <p>Datele ce vor fi introduse in acest tabel sunt furnizate de form-ul din pagina de home.</p>
+
+            <p>Asa arata structura tabelului feedback:</p>
+            <ul>
+                <li>ID_feedback</li>
+                <li>quality_score</li>
+                <li>feedback</li>
+
             </ul>
 
         </section>
@@ -270,11 +289,10 @@
             Servicii
         </h3>
         <p>
-            Pagina de servicii este populata cu diferite oferte de servicii.
+            Pagina de servicii este un formular prin care se poate face comanda pentru un serviciu iar daca acesta este disponibil comanda este plasata. 
         </p>
         <p>
-            La un serviciu se afiseaza urmatoarele detalii:
-            numele serviciului, valabilitate si pret.
+            Pentru acest formular este necesar numele serviciului, pretul, orasul, data de start si data de sfarsit.
         </p>
         <section id="adaugareserviciifront">
             <h4>Adauga servicii</h4>
@@ -295,11 +313,16 @@
         <h3>
             Back End
         </h3>
+        <body><div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000FF&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2022-06-30T09:27:39.456Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\&quot; etag=\&quot;qI-70mfh6JDaLt-RNAqa\&quot; version=\&quot;14.5.0\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;SbbIOfOXWji67siN_XEf\&quot; name=\&quot;Page-1\&quot;&gt;7ZpZc9s2EMc/jR7j4SGa8qMOO2mnaTNVp24eIRIi4ZAEC4LW8em7uEhQpGTHTlwnluSD+GOxBBbATwuORv48375nqEw/0hhnI8+JtyN/MfI8NxwH8E8oO6WEl6ESEkZibdQKS7LHWnS0WpMYVx1DTmnGSdkVI1oUOOIdDTFGN12zNc26dy1RgnvCMkJZX70lMU+VOvHCVv+ASZKaO7uXV6omR8ZYj6RKUUw3luRfj/w5o5Srq3w7x5kInomLandzpLbpGMMFH2hAV3ciHmCRoQinMG7MDkI2/h3lepjzjAg3Wv9rV2r9EzSihdEXuIoYKTkBSVb/IfwLE1QgYQGdUUGmFa64uEZlRiLEiageeZcjz4eZ9WcVEUORf2PKtG1diAZFnRPR7wqzexKRWt08QytYWfKm4CaDEc9WcJGIi5EX6LF4gamEOFj1SovJfSMFqpUcKbQKFlZD287ci51yJjzZsel0o2PoWTO4S8mvq7u/P3rz2w9BMEt+Wd7id26zMpoZr/jOrMaU5yIIrrg/qlIsPIlwblLCcVXCRIOwgZ0I2ppk2RxmgsmmvjMZe+FKhJ4z+gWbmoIWWBjTglvGa/kSximSSyHfJmJ/X0Tji1ItCX+GMpKIdRDBysHQcJZjjq5jwnUPS0oKLpdcIOLtXEBU5o78FeGeg+aKkta7WtgVteAeiEOaNyAOuuzeG37UCBaII9HpUEz1v7XYnjOzUEx55E879RhGjVZZ12KNsgqPwoX4MXN/jxnH26M72J7995hCd9gOTEyDsUaJZqlr0LJpyeQ5WkttKpmGSBMgaXy3wIALveRMUSPkCTiZxjkpXpgmJUXKJkZ1gsRoaEzWYN6yhMgZ6rSqOOI1rzOJn1ooNScZ2SMOe+FNkcc7k+dMniPkCZwfhTxLAqTI++hZ0jXfKKAsd7ZJj0IAKUhAcIcERKxP2A9IdaPCeyxzzhwXe5nDYAsy4pIYa0kj3NKoa/iW+OKf5AujdRFLqriGKssuVSwCyZDNUPQlkc0OidLFD6Tkk9niBGl6NEEs0gcRp0ct2+EBdb7jFu4BzesTbYhyDXr6mPOG2PcqeGhpXheS34BkftglmX/ZJ5l7OUQy17lw7Jf7EmBrAfYnzpDYglVKyqYWR2kBCzPRg7lpU6UjcDuKHLmXrQ1pliJEmr/TO2QqmuI1txbqEDoe4UVvtaN+Vo8DUI+Dw4h7dq8MUttwPwKsXw3I8CQgcZzgpS5q0LXMdLp8hHGw3T9Ch12li5+12R3mfKfxhmpOQaKMpzShBcp+o7TUPnrYCx3xbmrM0xCvT9bG8q7Oy4M+N8mjIebLABRvCbcCAqXPJlZwvdjq4MjCzipAMkCgW+JjQWkilK25LO3s0mEDNe9i8k4DC+aa1izCDz0a8ByOWIL5Iz9oLQAOAY5JqNx3+zZENO3uk/gcamHqXR3A9DDbU2PSreyHWQeOxsEDjtSge44kYJsxnpl7Zu5XMndyZu6ZuQ89FHlVzO0lsE9lbuC/IuZaB3g4HGP2nAP8ktMoxWgvjt+kWFOWQ7zlo7/m+SF+Y2fvq//p7H0lX9/w7D2Zivf57P1TnL0bAv0MZ++POKdMUedmGvEaVvZeFc9p4Q+XFrrOSWCe88K3nhf6j8wLr4aB+D3ywskBXJ2n5oXjBxwdyQunjKGdZaY/N5+TOUKx/X6Mat1+y8i//g8=&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+            <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+        </body>
+        <body><div class="mxgraph" style="max-width:100%;border:1px solid transparent;" data-mxgraph="{&quot;highlight&quot;:&quot;#0000ff&quot;,&quot;nav&quot;:true,&quot;resize&quot;:true,&quot;toolbar&quot;:&quot;zoom layers lightbox&quot;,&quot;edit&quot;:&quot;_blank&quot;,&quot;xml&quot;:&quot;&lt;mxfile host=\&quot;app.diagrams.net\&quot; modified=\&quot;2022-06-30T09:37:18.112Z\&quot; agent=\&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36\&quot; etag=\&quot;-FAP_cEzFUk5yokV67gE\&quot; version=\&quot;14.5.0\&quot; type=\&quot;google\&quot;&gt;&lt;diagram id=\&quot;SbbIOfOXWji67siN_XEf\&quot; name=\&quot;Page-1\&quot;&gt;7ZpRc5s4EMc/jR+bMWDs9LG2k7Y37TVzuWmujzLIoBQQJ0Rs59PfLkggDHacnJ36LqRpBq1WQlpJP+8fPHBm8fqjIGn4lfs0GthDfz1w5gPbnthD+IuGjTK449IQCOaXJqs23LJHqoyqXZAzn2YNR8l5JFnaNHo8SagnGzYiBF813ZY8at41JQFtGW49ErWtd8yXYWm9tCe1/RNlQajvbI3flzUx0c5qJllIfL4yTM7VwJkJzmV5Fa9nNMLY6biU7a531FYDEzSRHQ344h7jAR4R8WgI86ZiK2Sj30mspjmLGHaj7H9uUmW/gUY80fY5zTzBUsnAVFR/w/7RhSQEPWAwZZB5RjOJ1ySNmEckw+qBDWvvwMo604zhVIq/PhfKN0+wQZLHDMedUfHAPJaXN4/IAjZWcVPoJoIZTxdwEeDFwHbVXGxXV0IcjPrS5rOHyuSWrYqZQit3bjQ0/fS9xL7OsCczNo1hNBxtYwU3Ifttcf/9qz27++S60+Dz7R19Z1U7o1rxTG70bgxljEGw8P4kCyn2hOFchUzSLIWFBsMKDiLYliyKZrASomjqDC9H9mSBoZeC/6S6JuEJRWeeSMN5Wfygc0iKrRCvAzzeF97oIi23hDMlEQtwH3iwcyg0nMZUkiufSTXClLNEFlvOxXgPLyAqs2HxH8M9A5uFJWVv2iZNozJYW8Yum91h7OyyeW/4LWcwJ5LgoCe41H/neDyneqPo8sD50KinMGuyiJoeSxJldDCZ469e+wcqJF3vPMHm6n+kHIYjNuCiG4wUShRLLY2WVU0me6hsoUkl3ZAoAgRV3zUw4EJtOV1UCHkBTj74MUtemSYpJ6WPT/KA4Gy4z5bgXrOEFSvUaJVJInOZRwV+crTkkkXskUg4C2+KPHZPnp48O8jjDs+bPDVi/qARwZOQhSytaqkXJrDFAjX665ooO0i08+QXR8o4FzroEFr5Tm3LD9iULqWxJF0n+IBe1P7e2c/iMA60cNRNmn89Kk22OtwH8O3ZnJrs5RT1IX1XRUUYwfPEr4BlgAzmITZ/oR0Ooyr+UG73VMqNkiMklxxMXMiQBzwh0RfOU9VHk2kAsMkQ/1U1WjTYbdRVnvd5nG6NuWKs1abbCVFB10waAYHSDx0ruJ6vVXCKwsYowAc7g2Ehi0sbhrJ2L0obs7TdoFx3XLz9hIK15rnw6IEZtEEyg1TWWEFJFLB4aN6zi1Squxv8XKmpaL9vUtHZhl05VtXK1HJbHY3crY7GWx1JIgIqWx0V4Kzm2LO0Z+kzWXrZs7Rn6YGa4LQshRX8H7LUUMSGcr2jizZsZ7ChCUuo2EVaaaBgB2pv8oQWrMXHaixL+SOTjDY0bR4VItcU0qlArT5kSKIYNrYSw5SVzzdZghcrPeYTy+GCii9A3+s9oNv/hK4GpKXV8W1THRvQLGI5Jd7PoGi2rYybMnrkXM7n7h7F3FLFRHiKulYNUaOlM5tcz4avCsWWMrfb0rxLrlcauq3X7S4RfxbC3rDZTbV/BEneAua4LckrODckuTW8GJo/e1h9imeDn3F3LnF71RhC1pwCiN+WVJAu/kn1sHCZJx66w9mRMI6IdgzqzRNv/5PBnng98X4J8dzRWROv19FvR0dbo15In05IP1cAH0t5H1FIW/q7K4X4PPTD9sSPL7d4Opq8VHI7T3T0ax5f4nZckKwi6jZyp+SxEMqY8/lkD3lN7Z5J7oW0bKmTSJYsuYjBocwfW8lm8aK58Rq6892ykRN2Zo11QozIG5MYc6tkkaUatueaP7p74ahf9HqbiAESxdNJ5KJk55eFNjRh+vIcU+eOHVzcnXMenGQe/Fb65fndsbO2834rvZ0QTqxDE8JzfCs9wy9SIE+ub+HUNbnSJ4X/xaRw3CeFfVL4ZK53SFLodnPwFZJC91hJYaujYyWFUKy/RF22rr+J7lz9Aw==&lt;/diagram&gt;&lt;/mxfile&gt;&quot;}"></div>
+            <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
+        </body>
         <section id="signuploginback">
             <h3>
                 Register & Login
             </h3>
-            <p>Arhitectura generala a partii/modulului responsabil de Register si Login o sa fie bazata pe MVC.</p>
             <p>Fiecare utilizator inregistrat va avea un email si un id unic.</p>
             <p>
                 Va fi o functionalitate de a schimba din register in login si vice-versa.
@@ -320,32 +343,44 @@
                 si verificarea userului in baza de date, daca acesta exista.
 
             </p>
+            <h4>Rank client/admin</h4>
+            <p>Pe pagina de admin este un formular prin care se poate modifica statului unui utilizator dupa id-ul acestuia.
+
+            </p>
 
         </section>
         <section id="serviciiback">
             <h3> Servicii </h3>
-            <p> La incarcarea paginii de shop, se vor afisa serviciile. In realizarea
-                functionalitatii se va utiliza metoda GET. </p>
-            <p>Pe pagina de verificam daca userul este logat.</p>
+            <p> La incarcarea paginii de shop, se va afisa formularul pentru comanda unui serviciu. In realizarea
+                functionalitatii se va utiliza metoda POST. </p>
+            
 
             <section id="adaugareserviciuback">
                 <h4> Adaugare serviciu</h4>
                 <p>Formularul de adaugare serviciu trebuie trimis cu toate campurile completate.</p>
 
             </section>
+            <section id="updateserviciuback">
+                <h4> Modificare serviciu</h4>
+                <p>Formularul de modificare serviciu nu trebuie trimis cu toate campurile completate si este disponibil pe pagina de admin.</p>
+            </section>
+            <section id="citypricesback">
+                <h4> Vizualizarea preturilor in functie de oras</h4>
+                <p>Pentru aceasta functionalitate folosim AJAX</p>
+            </section>
+            <section id="piechartback">
+                <h4> Vizualizarea datelor intr-un mod atractiv</h4>
+                <p>Pentru aceasta functionalitate folosim un Piechart</p>
+            </section>
+            <section id="exportPDFback">
+                <h4> Exportul datelor in format PDF</h4>
+            </section>
+            <section id="feedbackback">
+                <h4> Feedback</h4>
+                <p>Pentru aceasta functionalitate folosim metoda POST</p>
+            </section>
         </section>
 
-        
-        <section id="shopback">
-            <h3>Shop</h3>
-            <p>
-                Serviciul este luat din baza de date printr-un request de forma GET.
-            </p>
-            <p>
-                Toate informatiile primite despre un servicu vor fi afisate: categorie, oras, pret, valabilitate.
-            </p>
-            
-        </section>
         <section>
             <section id="teamwork">
                 <h2>Lucru in echipa</h2>

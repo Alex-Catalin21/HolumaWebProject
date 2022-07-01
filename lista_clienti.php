@@ -26,7 +26,7 @@ while($fetch = $result->fetch()){
             <td><?php echo $fetch['admin_val']?></td>
         </tr>
     
-              
+
 </table>
 <?php
         }

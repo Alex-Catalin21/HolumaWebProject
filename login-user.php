@@ -8,7 +8,7 @@
 
 
           // Prepare a select statement
-          $sql = "SELECT users_id, email, pass FROM users WHERE email = :email";
+          $sql = "SELECT users_id, email, pass FROM users WHERE email = :email";//fix "user" -> "users" invalid bug
 
           $cerere = BD::obtine_conexiune()->prepare($sql);
           $cerere->execute([
@@ -23,7 +23,7 @@
                     
                     // Store data in session variables
                     $_SESSION["loggedin"] = true;
-                    $_SESSION["id"] = $user['user_id'];
+                    $_SESSION["id"] = $user['users_id'];
                     $_SESSION["email"] = $user['email'];                            
                     
                     // Redirect user to home page
@@ -47,4 +47,5 @@
       }
       $actiune = new Login();
       $actiune -> loginUtilizator();
+    
 ?>
