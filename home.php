@@ -27,6 +27,11 @@
     </style>
     <!-- ajax css end !-->
 
+    <!-- style for space between buttons !-->
+    <style>
+    input { margin-bottom: 10px; }
+    </style>
+    
   </head>
   <body>
 
@@ -40,7 +45,7 @@
         if(!$_SESSION["loggedin"])
         {
         ?>
-          <a href="login.php">Log-in/Sign-in</a>
+          <a href="login.php">Log-in/Sign-up</a>
         <?php
         }else{
         ?>

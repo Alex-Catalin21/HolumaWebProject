@@ -26,7 +26,7 @@
         if(!$_SESSION["loggedin"])
         {
         ?>
-          <a href="login.php">Log-in/Sign-in</a>
+          <a href="login.php">Log-in/Sign-up</a>
         <?php
         }else{
         ?>

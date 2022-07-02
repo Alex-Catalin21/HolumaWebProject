@@ -19,7 +19,7 @@
       <div class="header-right">
         <a href="home.php">Home</a>
         <a class="active" href="shop.php">Services</a>
-        <a href="login.php">Log-in/Sign-in</a>
+        <a href="login.php">Log-in/Sign-up</a>
         <a href="">Log-out</a>
         <a href="admin.php">Admin</a>
       </div>

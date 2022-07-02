@@ -7,6 +7,6 @@
         $_SESSION["id"] = "";
         $_SESSION["email"] = "";  
 
-        // Redirect user to home page
-        header("location: home.php"); 
+        // Redirect user to register, home is only for registered users
+        header("location: register.php"); 
 ?>
